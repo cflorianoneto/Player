@@ -9,7 +9,5 @@ app.post('/sendQuestion', (req, res) => {
   const answer = `Resposta simulada para '${question}' no tempo ${timestamp}s.`;
   res.status(200).send({ answer });
 });
-
 module.exports = app;
-
 
