@@ -1,4 +1,5 @@
 øconst express = require('express');
+const cors = require('cors');
 const axios = require('axios');
 const { YouTubeTranscriptApi } = require('youtube-transcript-ts');
 const cors = require('cors');
@@ -15,6 +16,7 @@ app.options('*', (req, res) => {
 Access-Control-Allow-Origin: *
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const PERPLEXITY_API_KEY = process.env.PERPLEXITY_API_KEY;
