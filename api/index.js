@@ -1,8 +1,17 @@
-const express = require('express');
+øconst express = require('express');
 const axios = require('axios');
 const { YouTubeTranscriptApi } = require('youtube-transcript-ts');
 const cors = require('cors');
 app.use(cors());
+
+// MANUAL: Lide com requisições OPTIONS CORS para todos os endpoints
+app.options('*', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.sendStatus(200);
+});
+
 Access-Control-Allow-Origin: *
 
 const app = express();
