@@ -1,9 +1,10 @@
 const express = require('express');
 const axios = require('axios');
 const { YouTubeTranscriptApi } = require('youtube-transcript-ts');
-
 const cors = require('cors');
 app.use(cors());
+Access-Control-Allow-Origin: *
+
 const app = express();
 app.use(express.json());
 
